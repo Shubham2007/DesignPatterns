@@ -2,6 +2,9 @@
 
 namespace ObserverPatternDemo
 {
+    /// <summary>
+    /// Observable which are observed by the Observers
+    /// </summary>
     internal class WeatherStation : IObservable
     {
         /// <summary>
