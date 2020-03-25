@@ -1,4 +1,5 @@
 ﻿using Common;
+using FactoryPatternDemo;
 using ObserverPatternDemo;
 using StrategyPatternDemo;
 using System;
@@ -10,7 +11,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            int maxPatternsAvailable = 2;
+            int maxPatternsAvailable = 3;
 
             PrintPatterns();
 
@@ -53,6 +54,9 @@ namespace DesignPatterns
                 case 2:
                     return new InitiateStrategyPattern();
 
+                case 3:
+                    return new InitiateFactoryPattern();
+
                 default:
                     return null;
             }
@@ -65,6 +69,7 @@ namespace DesignPatterns
         {
             WriteLine("1 - Observer Pattern");
             WriteLine("2 - Strategy Pattern");
+            WriteLine("3 - Factory Pattern");
             WriteLine("Enter your choice");
             WriteLine();
         }
