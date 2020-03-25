@@ -53,10 +53,12 @@ namespace FactoryPatternDemo
                 return;
             }
                 
+            // Factory which cretes concrete objects
             VehicleFactory vehicleFactory = new ConcreteVehicleFactory();
 
             foreach(KeyValuePair<string, int> product in products)
             {
+                // Get the actual concrete shipping vehicle object using factory
                 IShippingVehicle shippingVehicle = vehicleFactory.GetShippingVehicle((DeliverySpeedEnum)product.Value);
                 shippingVehicle.ShipProduct(product.Key);
                 Thread.Sleep(2000);
