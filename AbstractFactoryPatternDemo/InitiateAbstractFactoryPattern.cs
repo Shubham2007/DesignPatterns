@@ -13,6 +13,7 @@ namespace AbstractFactoryPatternDemo
             WriteLine("Who are you?\nAdult = A\nChild = C");
             string input = ReadLine();
 
+            // Validate input
             if(string.IsNullOrEmpty(input) && (input.ToLower() != "a" || input.ToLower() != "c"))
             {
                 throw new ArgumentOutOfRangeException("Please enter valid choice");
@@ -20,6 +21,7 @@ namespace AbstractFactoryPatternDemo
 
             RecipeFactory factory;
 
+            // Choose factory to get releated objects
             switch (input.ToLower())
             {
                 case "a":
@@ -37,6 +39,7 @@ namespace AbstractFactoryPatternDemo
             WriteLine("Please wait while we are creating your sandwich and dessert");
             Thread.Sleep(2000);
 
+            // Factory will generate related objects
             var sandwich = factory.CreateSandwich();
             var dessert = factory.CreateDessert();
 
