@@ -1,4 +1,5 @@
 ﻿using AbstractFactoryPatternDemo;
+using CommandPatternDemo;
 using Common;
 using FactoryPatternDemo;
 using ObserverPatternDemo;
@@ -12,7 +13,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            int maxPatternsAvailable = 4;
+            int maxPatternsAvailable = 5;
 
             PrintPatterns();
 
@@ -29,6 +30,7 @@ namespace DesignPatterns
             }
 
             IInitiatePattern pattern = GetPatternInstance(patternChoice);
+            WriteLine();
 
             if (pattern == null)
                 throw new ArgumentNullException(nameof(pattern));
@@ -61,6 +63,9 @@ namespace DesignPatterns
                 case 4:
                     return new InitiateAbstractFactoryPattern();
 
+                case 5:
+                    return new InitiateCommandPattern();
+
                 default:
                     return null;
             }
@@ -75,8 +80,9 @@ namespace DesignPatterns
             WriteLine("2 - Strategy Pattern");
             WriteLine("3 - Factory Pattern");
             WriteLine("4 - Abstract Factory Pattern");
-            WriteLine("Enter your choice");
+            WriteLine("5 - Command Pattern");
             WriteLine();
+            WriteLine("Enter your choice");
         }
     }
 }
