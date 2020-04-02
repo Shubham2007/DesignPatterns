@@ -30,6 +30,7 @@ namespace CommandPatternDemo
             WriteLine("UnDoing The Changes...");
             Thread.Sleep(2000);
 
+            // Introducing the undo action using command pattern
             modifyPrice.UndoActions();
             WriteLine(product);
         }
