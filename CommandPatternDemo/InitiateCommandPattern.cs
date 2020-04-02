@@ -24,7 +24,7 @@ namespace CommandPatternDemo
             WriteLine(product);
             WriteLine();
 
-            WriteLine("Undoing The Changes.....");
+            WriteLine("Undoing The Changes....");
             Thread.Sleep(2000);
 
             // Introducing the undo action using command pattern
