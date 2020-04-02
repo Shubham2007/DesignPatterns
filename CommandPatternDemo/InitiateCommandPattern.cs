@@ -17,11 +17,8 @@ namespace CommandPatternDemo
 
             // Commands
             Execute(modifyPrice, new ProductCommand(product, PriceAction.Increase, 100));
-
             Execute(modifyPrice, new ProductCommand(product, PriceAction.Increase, 50));
-
             Execute(modifyPrice, new ProductCommand(product, PriceAction.Decrease, 800));
-
             Execute(modifyPrice, new ProductCommand(product, PriceAction.Decrease, 25));
 
             WriteLine(product);
